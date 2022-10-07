@@ -3,6 +3,9 @@ import inquirer from 'inquirer'
 // const inquirer = require('inquirer');
 
 // const {prompt} = require("inquirer");
+function all() {
+    console.log('welcome')
+}
 
 function questions() {
     inquirer.prompt ([
@@ -18,8 +21,17 @@ function questions() {
 ])
 .then((answers) => {
     console.log(answers)
-    // if (answers === []) {
+    switch (answers['all questions'] ) {
+        case 'View all deparments' :
+            all()
+            break;
+        case 'View all roles' :
+            allrole()
+            break;
         
+    }
+    // if (answers == choices[0]) {
+    //     console.log(answers)
     // }
 })
 }
